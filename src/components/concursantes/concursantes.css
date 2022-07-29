@@ -1,0 +1,46 @@
+.content {
+  background: repeating-conic-gradient(
+    from 45deg,
+    #3c5eb7 0% 25%,
+    #ab86d9 0% 50%
+  );
+  background-size: 32px 32px;
+  background-color: #ab86d9;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.concursantes-content {
+  background-color: bisque;
+  border-radius: 2rem;
+  width: 110rem;
+  height: 60rem;
+}
+.form {
+  background-color: black;
+  position: absolute;
+  top: 2rem;
+  width: 60rem;
+  height: 6rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form a {
+  text-decoration: none;
+  font-size: 4rem;
+  color: white;
+}
+.form a:hover {
+  transition: 0.4s;
+  margin-left: 2rem;
+  color: aquamarine;
+}
+.concursantes-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

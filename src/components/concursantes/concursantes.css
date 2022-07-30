@@ -16,7 +16,7 @@
   background-color: bisque;
   border-radius: 2rem;
   width: 110rem;
-  height: 60rem;
+  height: auto;
 }
 .form {
   background-color: black;
@@ -36,11 +36,17 @@
 }
 .form a:hover {
   transition: 0.4s;
-  margin-left: 2rem;
+  margin-right: 2rem;
   color: aquamarine;
 }
-.concursantes-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.concursantes-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fit);
+  place-content: center;
+  place-items: center;
+}
+.lista-concursantes{
+  color: aliceblue;
+  font-size: 2rem;
 }

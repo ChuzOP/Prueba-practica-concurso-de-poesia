@@ -2,34 +2,34 @@ import "./formulario.css";
 import { Link } from "react-router-dom";
 
 const Formulario = ({ values, setValues, concursantes, setConcursantes }) => {
-  const fechaDeNacimiento = values.dateOfBirth;
-  const calcularEdad = (fechaDeNacimiento) => {
-    const fechaActual = new Date();
-    const anoActual = parseInt(fechaActual.getFullYear());
-    const mesActual = parseInt(fechaActual.getMonth())+1;
-    const diaActual = parseInt(fechaActual.getDate());
+  // const fechaDeNacimiento = values.dateOfBirth;
+  // const calcularEdad = (fechaDeNacimiento) => {
+  //   const fechaActual = new Date();
+  //   const anoActual = parseInt(fechaActual.getFullYear());
+  //   const mesActual = parseInt(fechaActual.getMonth())+1;
+  //   const diaActual = parseInt(fechaActual.getDate());
     
-    const anoDeNacimiento = parseInt(String(fechaDeNacimiento).substring(0,4));
-    const mesDeNacimiento = parseInt(String(fechaDeNacimiento).substring(5,7));
-    const diaDeNacimiento = parseInt(String(fechaDeNacimiento).substring(8,10));
-    let edad = anoActual - anoDeNacimiento;
-    if(mesActual < mesDeNacimiento){
-      edad--;
-    }else if(mesActual === mesDeNacimiento){
-      if(diaActual===diaDeNacimiento){
-        edad--;
-      }
-    }
-    return edad;
-  };
-  const edad = calcularEdad(fechaDeNacimiento);
+  //   const anoDeNacimiento = parseInt(String(fechaDeNacimiento).substring(0,4));
+  //   const mesDeNacimiento = parseInt(String(fechaDeNacimiento).substring(5,7));
+  //   const diaDeNacimiento = parseInt(String(fechaDeNacimiento).substring(8,10));
+  //   let edad = anoActual - anoDeNacimiento;
+  //   if(mesActual < mesDeNacimiento){
+  //     edad--;
+  //   }else if(mesActual === mesDeNacimiento){
+  //     if(diaActual===diaDeNacimiento){
+  //       edad--;
+  //     }
+  //   }
+  //   return edad;
+  // };
+  // const edad = calcularEdad(fechaDeNacimiento);
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setValues(values.age = edad )
     setConcursantes([...concursantes, values]);
+    // setValues(values.age = edad )
     console.log(values);
   };
   return (
